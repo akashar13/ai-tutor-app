@@ -2,14 +2,18 @@ pipeline {
     agent any
 
     stages {
-
         stage('Checkout') {
             steps {
                 git branch: 'main',
                     url: 'https://github.com/akashar13/ai-tutor-app.git'
             }
         }
-
+        stage('Debug') {
+            steps {
+                bat 'where python'
+                bat 'echo %PATH%'
+            }
+        }
         stage('Setup Python') {
             steps {
                 bat 'python --version'
