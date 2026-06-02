@@ -8,16 +8,10 @@ pipeline {
                     url: 'https://github.com/akashar13/ai-tutor-app.git'
             }
         }
-        stage('Debug') {
-            steps {
-                bat 'where python'
-                bat 'echo %PATH%'
-            }
-        }
+       
         stage('Setup Python') {
             steps {
-                bat 'python --version'
-                bat 'pip --version'
+                bat '"C:\\Users\\Akash AR\\AppData\\Local\\Microsoft\\WindowsApps\\python.exe" --version'
             }
         }
 
